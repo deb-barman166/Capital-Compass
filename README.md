@@ -1,20 +1,104 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 Capital Compass
 
-# Run and deploy your AI Studio app
+A modern productivity and life-balance dashboard built with React.
 
-This contains everything you need to run your app locally.
+Track your yearly consistency across multiple life dimensions with a 365/366-day progression system, radar visualization, smart calendar tracking, and Excel/CSV import support.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1bsvFb9kO_Nr-GJRMYMTr9C58xXTAnRm7
+---
 
-## Run Locally
+## 🌟 Features
 
-**Prerequisites:**  Node.js
+### 📅 Calendar System
+- Daily task tracking
+- Large circular status indicators:
+  - 🟢 Completed
+  - 🟡 Pending (Grace)
+  - 🔴 Expired
+- Past tasks automatically locked (cannot be modified)
+- Fully responsive and mobile-friendly
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 📊 5-Level Progression System
+
+Each capital grows daily based on completed tasks.
+
+| Level | Completion % |
+|--------|---------------|
+| 1      | 0–20%         |
+| 2      | 21–40%        |
+| 3      | 41–60%        |
+| 4      | 61–80%        |
+| 5      | 81–100%       |
+
+- Automatically calculates based on 365 days
+- Supports leap year (366 days)
+- Level updates dynamically
+- Radar chart grows smoothly day-by-day
+
+---
+
+### 🧭 Radar Chart Visualization
+
+Tracks 6 life dimensions:
+
+- Skill
+- Physical
+- Emotional
+- Social
+- Intellectual
+- Financial
+
+Features:
+- Smooth growth animation
+- Percentage-based scaling (0–100%)
+- Auto-updating legend
+- Clean modern dashboard UI
+
+---
+
+### 📥 Excel / CSV Import System
+
+Upload `.xlsx` or `.csv` files and automatically:
+
+- Parse task data
+- Add tasks to calendar
+- Update completedDays
+- Recalculate progress
+- Update levels
+- Refresh radar chart
+
+Supported columns:
+
+| Column     | Description |
+|------------|------------|
+| date       | YYYY-MM-DD |
+| capital    | Capital name |
+| taskName   | Task title |
+| status     | completed / pending |
+
+---
+
+### 🔒 Date Lock Protection
+
+- If task date < today → Locked
+- Cannot uncheck past completed tasks
+- Prevents progress manipulation
+- Timezone-safe comparison logic
+
+---
+
+## 🛠 Tech Stack
+
+- React
+- Tailwind CSS
+- Chart Library (Radar Chart)
+- SheetJS (xlsx)
+- PapaParse (CSV)
+- LocalStorage / Backend Support
+
+---
+
+## 📈 Progress Logic
+
+Daily growth formula:
