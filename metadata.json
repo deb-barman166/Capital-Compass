@@ -1,0 +1,5 @@
+{
+  "name": "Capital Compass",
+  "description": "A privacy-first, minimal productivity system based on the Capital Compass framework with automated grace periods.",
+  "requestFramePermissions": []
+}
